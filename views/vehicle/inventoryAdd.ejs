@@ -1,0 +1,65 @@
+
+<div class="table-wrapper">
+<%-include('./inventoryHead.ejs') %>
+    <div class="container">
+        <% if (message != '') { %> 
+            <p class="text-center text-danger"><%= message %></p>
+        <% } %>
+        <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="brand" id="first-name" placeholder="Brand/Model" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="date" class="form-control" name="date" id="last-name" placeholder="Date Acquired" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="plate" id="username" placeholder="Plate Number" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="number" min="1" step="any" class="form-control" name="cost" id="number" placeholder="Cost" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <select id="position" name="category" class="form-control" required>
+                        <option selected disabled>Choose category</option>
+                        <option>bus</option>
+                        <option>van</option>
+                        <option>farm</option>
+                        <option>motorcycle</option>
+                        <option>heavy</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                        <div class="form-group col-md-10">
+                            Health Status
+                            <input type="text" class="form-control" name="health" id="first-name" placeholder="make it brief..." required>
+                        </div>
+                        <div class="form-group col-md-10">
+                            Repairs
+                            <input type="text" class="form-control" name="repairs" id="last-name" placeholder="make it brief..." required>
+                        </div>
+                        <div class="form-group col-md-10">
+                            Availability
+                            <input type="text" class="form-control" name="availability" id="username" placeholder="make it brief..." required>
+                        </div>
+                        <div class="form-group col-md-10">
+                            Pending Jobs
+                                <input type="text" class="form-control" name="pendingjobs" id="username" placeholder="make it brief..." required>
+                            </div>
+                    </div>
+
+                <div class="col-md-12">
+                    <label for="player-img"><b>Vehicle Image</b></label><br>
+                    <input type="file" name="image" id="player-img" class="" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary float-right">Store</button>
+            
+        </form>
+    </div>
+</div>
+
+</div>

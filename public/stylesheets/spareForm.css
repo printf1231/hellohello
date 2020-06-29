@@ -1,0 +1,134 @@
+.Sparewrapper{display: none;}
+@media print{
+
+.Sparewrapper{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+.formBox1{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    height: 100px;
+}
+.titleSpare{
+  font-size: 2rem;
+  width: 300px;
+}
+.logoSpare{
+  border-right: 1px solid black;
+  width: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: flex-start;
+    height: 100px;
+    list-style-type: none;
+}
+.logoSpare p{
+  font-size: .7rem;
+  margin-bottom:10px;
+    border:1px solid black;
+    margin-left: 18px;
+
+}
+.logoSpare img{
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.nos{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  height: 100px;
+
+}
+.nos ul{
+    padding: 0px;
+      list-style-type: none;
+
+display: block;
+list-style-type: disc;
+-webkit-margin-before: 0px;
+-webkit-margin-start: 0;
+-webkit-margin-end: 0;
+-webkit-padding-start: 0px;
+}
+.nos .hey{
+  list-style: none;
+  border: 1px solid black;  
+  height: 23px;
+  width: 100px;
+  font-size: .7rem;
+}
+.nos #dateForm{
+    list-style: none;
+    padding-top: 5px;
+    border: 1px solid black;  
+    height: 19px;
+    width: 100px;
+    font-size: .7rem;
+}
+.formBox2{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.formBox2 .one{
+  list-style-type: none;
+  width: 400px;
+  padding: 0px;
+
+}
+.phey{
+    display: flex;
+}
+.formBox2 .one{
+  list-style-type: none;
+  padding: 0px;
+}
+.formBox2 p{
+  font-size: 1.1rem;
+}
+.table{
+  width: 100%;
+}
+.table ul{
+  padding: 0px;
+  list-style-type: none;
+}
+.tableTitle1{
+  display: flex;
+  justify-content: space-around;
+}
+.tableTitle{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.tableTitle span{
+    border: 1px dotted black;
+    width: 350px;
+    text-align: center;
+    height: 20px;
+    padding-top: 5px;
+}
+.tableTitle1 span{
+width: 119px;
+border: 1px solid black;
+text-align: center;
+height: 50px;
+padding-top: 5px;
+font-size: 1.1rem;
+margin-bottom: 10px;
+}
+
+}

@@ -1,0 +1,249 @@
+.jobcontent{
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background: #ccc;
+    padding: 30px 50px;
+
+}
+.all1{
+    width: 90%;
+    color: #ccc;
+    display: flex;
+    justify-content: space-between;
+    background: var(--dark);
+
+}
+.tree-title{
+    display: block;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    height: 40px;
+    background: var(--dark);
+    color: var(--green);
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 5px;
+
+}
+
+.job-tree3{
+    padding: 10px;
+    height: 650px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    background: var(--dark);
+    display: flex;
+    
+    flex-direction: column;
+}
+
+.tree3{
+
+    margin-bottom: 10px;
+    box-shadow: var(--shadow);
+    list-style: none;
+    color: var(--primary);
+}
+.treeDetails{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.treeDetails:hover{
+    background: var(--green);
+   
+}
+.treeDetails img{
+    width: 80px;
+    height: 80px;
+    border-radius: 15px; 
+    margin-right: 5px;   
+}
+.goback{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    width: 90%;
+   
+}
+.goback a{
+    text-decoration: none;
+    color: var(--green);
+}
+.goback a:hover{
+    text-decoration: underline;
+}
+
+.add-thread{
+    margin-left: 50px;
+}.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0);
+    transition: 200ms ease-in-out;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: var(--dark);
+    color: var(--primary);
+    width: 70%;
+    height: 80%;
+    max-width: 80%;
+    box-shadow: var(--shadow);
+    padding-top:10px;
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%)scale(1);
+  }
+
+.close-button{
+    margin-left: 10px;
+    font-size: 2rem;
+    border: none;
+    text-decoration: none;
+    color: var(--primary);
+    cursor: pointer;
+}
+.close-button:hover{
+    color: var(--green);
+}
+.columnperson1 {
+    height: 50%;
+   padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 40px; */
+}
+.job-information{
+    width: 60%;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    overflow-y: hidden;
+      overflow-x: auto; 
+}
+.personInCharge{
+    margin-left: 20px;
+    width: 300px;
+    padding: 10px;
+    overflow: hidden;
+}
+.personTitle{
+    font-size: 1.1rem;
+    margin-top: 0px;
+}
+.personInCharge img{
+    width: 300px;
+    height: 200px;
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+
+}
+.picImages{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    overflow-x: hidden;
+      overflow-x: auto;
+    width: 305px;
+    height: 220px;
+    box-shadow: var(--shadow);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+/* .picImages img{
+    width: 300px;
+    height: 300px;
+} */
+
+.columnperson2{
+    margin-left: 10px;
+    width: 95%;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.totalcost {
+    font-size: 1.1rem;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+.totalcost textarea{
+    resize: none;
+    width: 200px;
+    height: 20px;
+      border: none;
+      border-radius: 5px;
+    margin-left: 20px;
+    font-size: 1.1rem;
+}
+.receiptsImg{
+    width: 700px;
+    height: 260px;
+    box-shadow: var(--shadow);
+    display: flex;
+    overflow-y: hidden;
+      overflow-x: auto; 
+}
+
+.receiptsImg img{
+    margin-top: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 300px;
+    height: 250px;
+}
+.receipt-title{
+    font-weight: bold;
+    margin-left: 150px;
+}
+.list-details{
+    list-style: none;
+    height: 200px;
+    
+    overflow-x: hidden;
+      overflow-x: auto;
+
+}
+
+.job-detail-list {
+
+ margin-left: 10px;
+ font-size: 1rem;
+}
+
+#brief{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#date{
+    margin-bottom: 15px;
+}
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }

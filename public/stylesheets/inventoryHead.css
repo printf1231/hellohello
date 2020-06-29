@@ -1,0 +1,8 @@
+.overall{
+    max-width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background: rgb(153, 152, 152);
+    max-height: 100%;
+}

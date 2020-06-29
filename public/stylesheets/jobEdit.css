@@ -1,0 +1,168 @@
+nav .maintenance{
+    background: var(--green);
+    color: var(--dark);
+    font-size: 1.3rem;
+    font-weight: bold;
+  
+  }
+  .job-wrapper{
+    height: 100%;
+    width: 90%;
+    max-height: 100%;
+    max-width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background: #ccc;
+    padding-left:10%;
+  }
+  
+  .job-wrapper h3{
+      font-size: 2rem;
+      margin-left: 100px;
+      margin-bottom: 10px;
+  }
+  .navigation{
+      display: flex;
+      justify-content: space-between;
+      margin-right: 100px;
+  }
+  .navigation a{
+      text-decoration: none;
+      color: var(--green);
+  }
+  .navigation a:hover{
+      text-decoration: underline;
+  }
+  .wrapper-wrapper{
+    background: rgb(153, 152, 152);
+      width: 70%;
+      margin-left: 100px;
+      box-shadow: var(--shadow);
+      display: flex ;
+      height: 600px;
+      padding: 20px ;
+      border-radius: 5px;
+  }
+  .labels{
+      display: grid;
+      margin-left: 50px;
+  }
+  .label3{
+      font-size: 1.1rem;
+      text-align: right;
+
+  }
+  .label4{
+    font-size: 1.1rem;
+    text-align: right;
+  }
+  .label5{
+    font-size: 1.1rem;
+    text-align: right;
+    margin-top: 100px;
+  }
+  .label6{
+      margin-top: 0px;
+    font-size: 1.1rem;
+    text-align: right;
+  }
+  .text-area1{
+      resize: none;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 3px;
+  }
+  .inputs{
+      display: grid;
+      margin-left: 10px;
+  }
+  .inputs input{
+    border: none;
+    border-radius: 5px;
+  }
+  .inputs #text-area{
+      margin-bottom: 10px;
+  }
+  .date-time{
+      margin-top: 0px;
+  }
+  /* .input3{
+      height: 10px;
+  } */
+.right{
+    width: 400px;
+    display: grid;
+    height: 100px;
+    font-size: 1.1rem;
+    text-align: right;
+    margin-left: 100px;
+}
+.right input{
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    text-align: center;
+    width: 250px;
+    margin-bottom: 20px;
+}
+.statusSelect{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 15px;
+
+}
+.receipt-tag{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.add-button{
+    margin-top: 390px;
+    margin-left: 100px;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    color: var(--green);
+    border: none;
+    font-size: 1rem;
+}
+.add-button:hover{
+    color: var(--green);
+    background: var(--dark);
+
+}
+.receipt-pic{
+    display: block;
+    width: 650px;
+    height: 250px;
+      overflow-x: hidden;
+      overflow-x: auto;
+    box-shadow: var(--shadow);
+    
+}
+.gallery{
+    display: flex;
+    justify-content: space-around;
+}
+.gallery img{
+    margin-top: 20px;
+    margin-left: 5px;
+    width: 300px;
+    height: 200px;
+    border: none;
+    border-radius: 2px;
+}
+.receipt{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3,1fr);
+    width: 600px;
+    margin-bottom: 5px;
+}

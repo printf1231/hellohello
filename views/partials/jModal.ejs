@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="../stylesheets/jModal.css">
+<style>
+        .img-zoom-container{
+          position: relative;
+        }
+        .img-zoom-lens{
+          position:absolute;
+          border:1px solid black;
+          width:40px;
+          height:40px;
+        }
+        .img-zoom-result{
+          border:1px solid black;
+          width:496px;
+          height:300px;
+          margin-left: 10px;
+          background-repeat: no-repeat;
+        }
+        </style>
+
+
+<form  method="get" id="printableArea">
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <a data-close-button class="close-button">&times;</a>
+            <!-- <button data-close-button class="close-button">&times;</button> -->
+        </div>
+        <div class="jobview">
+        
+            <div class="columnperson1">
+                <div class="personInCharge">
+                 <div class="personTitle">Persons-In-Charge</div>
+                     <div class="picImages" >
+                         
+                        <img src="" alt="" id="personsIncharge">
+                     </div>
+                 </div>
+                 <div class="job-information" id="job-information">
+                    <ul class="list-details">
+                        <li class="job-detail-list" ><span id="brief"></span></li>
+                        <li class="job-detail-list" ><span id="more"></span></li>
+                        <li class="job-detail-list" ><span id="date"></span></li><br>
+                        <li class="job-detail-list" >Materials Used and Qauntity:  &nbsp;<span id="used"></span></li>
+                        <li class="job-detail-list" >Person-in-Charge:  &nbsp;<span id="pio"></span></li>
+                        <li class="job-detail-list" >Vehicle Used-Plate Number:  &nbsp;<span id="involved"></span></li>
+                        <li class="job-detail-list" >Status:  &nbsp;<span id="status"></span></li>
+                        <li id="fuck"></li>
+                    </ul>
+                 </div>
+            </div>
+            <div class="columnperson2">
+                <div class="totalcost">Total Cost: <br><br>
+                    <div id="tcost">₱&nbsp;</div><br><br>
+  
+                </div>
+                <div class="receipt-title">Receipts</div>
+                <div class="receipthere">
+                <div class="img-zoom-container">
+                        <img id="myreceipt" src="" width="300" border="1px" alt="">
+                    <div class="img-zoom-result" id="myresult"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+    
+    
+    <div id="overlay"></div>
+    <script>
+  imagezoom("myreceipt","myresult");
+</script>
+    </form>

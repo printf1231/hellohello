@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="../stylesheets/jobAdd.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="../javascripts/jobadd.js"></script>
+<section class="job-wrapper">
+                
+        <div class="navigation">
+    <h3>JOB CONTENT</h3>
+    <a href="/maintenance/history"><h3>Work History</h3></a>
+<a href="/maintenance"><h3>Maintenance</h3></a>     
+</div>
+<form action="" method="POST" enctype="multipart/form-data">
+        <div class="wrapper-wrapper">
+                <div class="labels">
+                        <label class="label3" for="briefDescription">Brief Description</label>
+                        <label class="label4" for="moreInfo">More Info</label>
+                       <br><br> <br>
+                        
+                        <label class="label5" for="material">Materials</label>
+                        <label class="label6" for="spare">Quantity/Size <br> of Spare</label>
+                        <label class="label6" for="totalCost">Total Cost</label>
+                        <label class="label6" for="incharge">Person in-charged</label>
+
+                 </div>
+                <div class="inputs">
+        
+                         <input type="text" name="briefDescription" style="height: 30px;" class="job-form" placeholder="" required>
+                         <textarea name="moreInfo" id="text-area" cols="30" rows="10" class="text-area1"></textarea>  
+                        <div class="date-time">
+                                 <label class="label3" for="date">Date</label>
+                                <input type="date" name="date"  style="height: 20px;width: 120px;padding-left: 3px; " placeholder="" required>
+                                <label class="label3" for="time">Time</label>
+                                <input type="time" name="time" style="height: 20px;width: 90px;padding-left: 3px;" placeholder="" required>
+                        </div>
+                        
+                        <textarea name="materialUsed" id="" cols="30" rows="3" class="text-area1"></textarea>
+                        <textarea name="quantity" id="" cols="30" rows="3" class="text-area1"></textarea>
+                        <input type="number" min="1" step="any" name="totalCost" class="job-form" style="height: 30px; text-align: center;" placeholder="" required>
+                        <select id="position" name="incharge" class="statusSelect" required>
+                                        <option selected disabled>Select Staff</option>
+                                        <% staff.forEach(function (staff,index) {%>
+                                                 <option><%=staff.person%></option>  
+                                        <%})%>
+                                                
+                                    
+                                     
+
+                                    </select>
+                </div>
+                <div class="right">
+                        <div class="rLeft">
+                                <label for="vehicleInvolved">Vehicle Involved</label>
+                                <input type="text" name="vehicleInvolved" class="job-form" placeholder="" >
+                                
+                                
+                        </div>
+                        <div class="rRight">
+                                <label for="plateNumber">Plate Number</label>
+                                <input type="text" name="plateNumber" class="job-form" placeholder="" ><br>
+                                <label for="status">Status</label>
+                                <select id="position" name="status" class="statusSelect" required>
+                                                <option selected disabled>Choose status</option>
+                                                <option>Unfinished</option>
+                                                <option>Finished</option>
+                                                <option>On-going</option>
+                                            </select>
+                        </div>
+                        
+                        <div class="showReceipt">
+                        <div class="receipt-tag">receipt
+                         <input type="file" name="image" id="gallery-photo-add" multiple>
+                        </div>
+                        <div class="receipt-pic">
+                                        
+                                       
+                        <div class="receipt">
+                                
+                                        <div class="gallery"></div>
+                        </div>
+                        </div><br>
+                </div>
+                        <div>
+                                        <button class="add-button" value="submit" type="submit">ADD</button>
+                                        
+                        </div>
+                       
+                </div>
+               
+        </div>
+</form>
+     
+</section>

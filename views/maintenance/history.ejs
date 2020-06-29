@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/stylesheets/history.css">
+<form action="" >
+    <div class="history-wrapper">
+        <div class="add-work">
+            <h7>WORKS HISTORY</h7>
+            
+            <a href="/maintenance"><h7>Maintenance</h7></a>
+            
+       </div>
+        
+    <div class="works">
+        <div class="history-content">
+            <div class="titlebar">
+                <span class="history">Date Added</span><span class="history">Equipment</span>
+                                <span class="history">Job Description</span><span class="history">Status</span><span class="history">Action</span></div>
+                               
+            <ul class="jobs">
+                <div class="clickhere"><a href="/maintenance/add-work" class="clicktoadd">click here to add work</a></div>
+                <% if (history.length > 0) {%>
+                        <% history.forEach((tasks, index) => { %>
+                            <li class="job" data-modal-target='#modal'
+                            onclick="document.getElementById('personsIncharge').src = '/assets/staffs/<%=tasks.image%>',
+                                   document.getElementById('more').append('<%=tasks.moreInfo%>') ,
+                                        document.getElementById('date').append('<%=tasks.DATE%>') ,
+                                        document.getElementById('brief').append('<%=tasks.briefDescription%>') ,
+                                        document.getElementById('used').append('<%=tasks.materialUsed%> <%=tasks.size%>') ,
+                                        document.getElementById('tcost').append('<%=tasks.totalCost%>') ,
+                                        document.getElementById('pio').append('<%=tasks.pio%>') ,
+                                        document.getElementById('recImage').src='/assets/receipt/<%=tasks.receiptImage%>' ,
+                                        document.getElementById('involved').append('<%=tasks.vehicleInvolved%> <%=tasks.plateNumber%>'),
+                                        document.getElementById('status').append('<%=tasks.status%>') "
+                                         ><span class="history"><%= tasks.DATE%></span><span class="history"><%= tasks.vehicleInvolved%></span>
+                                <span class="history"><%= tasks.briefDescription%></span><span class="history"><%= tasks.status%></span>
+                                <span class="history"><a href="/maintenance/edit-work/<%= tasks.id %>" rel="noopener" class="action edit" >Edit</a>
+                                                        <a href="/maintenance/delete/<%= tasks.id %>" class="action delete" >Delete</a></span>
+                                                        </li>
+                        <% }); %>
+                  <% }else{ %>
+                    <p class="notasks">History Empty</p>
+                    <%};%>  
+            </ul>
+        </div>
+   
+    </div>
+</div> 
+</form>

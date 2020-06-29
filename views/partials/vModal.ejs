@@ -1,0 +1,51 @@
+<!-- <script defer src="../javascripts/vModal.js"></script>
+<link rel="stylesheet" href="../stylesheets/vModal.css"> -->
+<form  method="get">
+<div class="modal" id="modal">
+    <div class="modal-header">
+        <h3 class="title" id="title"></h3>
+        <a data-close-button class="close-button href="">&times;</a>
+        <!-- <button data-close-button class="close-button">&times;</button> -->
+       
+    </div>
+<div class="modal-body">
+  <div class="body-details">
+    <div class="info">
+      <div class="clicked">
+        <img id="modalImage" src="" alt="">
+      </div>
+      <ul class="detail">
+       <li> <span class="brown">Brand/Model:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="black"  id="brand"></span></li>
+        <li ><span class="brown">Plate Number:</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="black" id="pl"></span> </li>
+        <li ><span class="brown">Date Acquired:</span>&nbsp;&nbsp;&nbsp;<span class="black" id="da"></span> </li>
+        <li ><span class="brown">Cost:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="black" id="cost">₱ </span></li>
+      </ul>
+    </div>
+    
+    <div class="more-info">
+          <ul class="detail">
+            <li class="black"><span class="brown">Health Status:</span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="hs"></span></li>
+            <li class="black"><span class="brown">Repairs:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="repair"></span></li>
+            <li class="black"><span class="brown">Availability:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="avail"></span></li>
+            <li class="black"><span class="brown">Pending Jobs:</span>&nbsp;&nbsp;&nbsp;<span  id="pj"></span></li>
+            <p id="thisisit"></p>
+          </ul>
+         
+    </div>
+
+   <button type="button" class="print" id="print" value="print">Print<span class="tooltiptext">Print purchase order form</span></button>
+    
+  </div>
+
+
+
+ 
+</div>
+</div>
+
+
+<div id="overlay"></div>
+
+</form>

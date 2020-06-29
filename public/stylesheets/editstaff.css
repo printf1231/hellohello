@@ -1,0 +1,125 @@
+:root{
+    --primary: #ddd;
+    --dark: #333;
+    --green:#3F6826;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  }
+.staffAdd{
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background: rgb(58, 57, 57);
+}
+.goback{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    width: 80%;
+    margin-left: 110px;
+    margin-top: 50px;
+   
+}
+.goback a{
+    text-decoration: none;
+    color: var(--green);
+}
+.goback a:hover{
+    text-decoration: underline;
+}
+.addstaff{
+    margin-top: 50px;
+    margin-left: 200px;
+    width: 70%;
+    height: 500px;
+    padding: 50px;
+    box-shadow: var(--shadow);
+    display: flex;
+    background: rgb(153, 152, 152);
+    border-radius: 5px;
+}
+.previewstaff{
+    width: 200px;
+    height: 200px;
+    box-shadow: var(--shadow);
+}
+.gallery img{
+    width: 200px;
+    height: 200px;
+}
+.staffDetail{
+    margin-top: 50px;
+    box-shadow: var(--shadow);
+    width: 80%;
+    padding: 20px;
+    margin-left: 20px;
+}
+.name input{
+    width: 250px;
+    margin-left: 20px;
+    border: none;
+    height: 30px;
+    border-radius: 3px;
+    text-indent: 10px;
+    margin-bottom: 20px;
+}
+.other input{
+    margin-left: 20px;
+    border: none;
+    height: 30px;
+    border-radius: 3px;
+    text-indent: 10px;
+
+}
+.other #age{
+    width: 200px;
+}
+.other #pos{
+    width: 400px;
+}
+.other #email{
+    width: 400px;
+}
+.other #bday{
+    width: 150px;
+    padding: 1px;
+}
+.other #address{
+    width: 800px;
+}
+
+.actions{
+    margin-top: 150px;
+    text-decoration: none;
+    display: flex;
+    margin-left: 80%;
+    
+
+}
+.deleteStaff{
+    box-shadow: var(--shadow);
+    color: var(--dark);
+    background: red;
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 1.1rem;
+    text-decoration: none;
+   
+}
+.button{
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--primary);
+    background: var(--dark);
+    padding: 5px;
+    border: none;
+    margin-right: 40px;
+    font-size: 1rem;
+
+}
+.button:hover{
+    color: var(--green);
+}

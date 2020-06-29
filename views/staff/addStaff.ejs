@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="../stylesheets/addstaff.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="../javascripts/jobadd.js"></script>
+
+<form action="" method="post" enctype="multipart/form-data">
+<div class="staffAdd">
+        <div class="goback">
+             <a href="/home">Mariano Marcos State University</a>
+             Add Staff
+             <a href="/staff">Staff</a>
+         </div>
+
+    <div class="addstaff">
+        <div>
+            <div class="previewstaff">
+                    <div class="gallery"></div>
+             </div>
+             <input type="file" name="image" id="gallery-photo-add">
+        </div>
+      <div class="staffDetail">
+        <div class="name">
+            <input type="text" placeholder="First Name" name="first" required>
+            <input type="text" placeholder="Middle Name" name="mid" required>
+            <input type="text" placeholder="Surname" name="last" required>
+        </div>
+        <div class="other">
+            <input id="age" type="number" placeholder="Age" name="age" required>
+            <input id="pos" type="text" placeholder="Position" name="position" required>
+            <input id="id" type="text" placeholder="Identification Number" name="idNumber" required>
+        </div><br>
+        <div class="other">
+          <input id="contact" type="number" placeholder="contact number" name="contact" required>
+          <input id="email" type="email" placeholder="email address" name="email" required>
+          <input id="bday" type="date" placeholder="birthdate" name="bday" required>
+      </div><br>
+      <div class="other">
+        <input id="address" type="text" placeholder="home address" name="address" required>
+        
+        <button type="submit" class="button">Add Staff</button>
+    </div>
+      </div>
+  
+    </div>
+
+</div>
+</form>

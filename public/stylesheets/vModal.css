@@ -1,0 +1,161 @@
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 200ms ease-in-out;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: var(--dark);
+  width: 700px;
+  max-width: 80%;
+  height: 500px;
+  box-shadow: var(--shadow);
+  padding-top:10px;
+}
+
+.modal.active {
+  display: block;
+
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  margin-bottom: 0px;
+}
+
+.modal-header .title {
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: var(--green);
+  margin-left: 30px;
+}
+
+.modal-header .close-button {
+  color: var(--green);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 2rem;
+  margin: 25px;
+ 
+}
+.close-button:hover{
+  border-radius: 5px;
+  background: var(--green);
+  color: var(--dark);
+  font-weight: bold;
+  padding: 0px 5px;
+  text-align: center;
+}
+
+.modal-body {
+  padding-left: 50px;
+  display: flex;
+  margin-top: 0px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10px;
+
+}
+
+
+.body-details{
+  padding: 5px 20px;
+  width: 800px;
+  max-height: 390px;
+}
+.body-details .clicked img{
+  box-shadow:var(--shadow);
+  width: 300px;
+  height: 200px;
+}
+.body-details .detail{
+  margin-top: 0px;
+  color: var(--primary);
+
+}
+.detail .brown{
+  font-weight: bold;
+  text-align: left;
+  
+}
+.more-info .black{
+  max-width: 500px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.info .detail{
+  margin-top: 40px;
+}
+.info{
+  display: flex;
+}
+.more-info{
+  margin-left: 0px;
+  margin-top: 20px;
+  height: 100px;
+  overflow-x: hidden;
+    overflow-x: auto;
+}
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.print{
+  text-decoration: none;
+  margin-left: 70%;
+border: none;
+border-radius: 5px;
+font-size: 1rem;
+padding: 5px;
+font-weight: bold;
+text-align: center;
+cursor: pointer;
+
+  position: relative;
+  display: inline-block;
+}
+.print .tooltiptext {
+  visibility: hidden;
+  width: 210px;
+  background-color: rgb(143, 142, 142);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 105%;
+}
+.print:hover{
+  color: var(--dark);
+  background: var(--green);
+}
+.print:hover .tooltiptext {
+  visibility: visible;
+}
+@media print{
+  .modal{display: none;}
+}

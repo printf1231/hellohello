@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="../stylesheets/maintenance.css">
+<script defer src="../javascripts/view-job.js" type="text/javascript"></script>
+
+<section class="maintenance-child">
+        
+        <form action="" method="GET">
+    <div class="today">
+        <h7>TODAY</h7>
+        <div class="today-content">
+            <ul>
+                    <% if (today.length > 0) {%>
+                        <% today.forEach((tasks, index) => { %>
+                  <%var todaysDate = new Date()%>
+                  <%var sqldate = tasks.date %>
+                               <% var datetoday = todaysDate.getDate()+''+(todaysDate.getMonth()+1)+''+todaysDate.getFullYear()%>
+                               <% var sqltoday = sqldate.getDate()+''+(sqldate.getMonth()+1)+''+sqldate.getFullYear()%>
+                        <% if(sqltoday == datetoday){%>
+                            <li class="todays-work">
+                                <p  data-modal-target='#modal'
+                                onclick="
+                                document.getElementById('personsIncharge').src = '/assets/staffs/<%=tasks.image%>',
+                                document.getElementById('brief').append('<%=tasks.briefDescription%>') ,
+                                   document.getElementById('more').append('<%=tasks.moreInfo%>') ,
+                                        document.getElementById('date').append('<%=tasks.DATE%>') ,
+                                        document.getElementById('used').append('<%=tasks.materialUsed%> <%=tasks.size%>') ,
+                                        document.getElementById('tcost').append('<%=tasks.totalCost%>') ,
+                                        document.getElementById('pio').append('<%=tasks.pio%>') ,
+                                        document.getElementById('myreceipt').src='/assets/receipt/<%=tasks.receiptImage%>' ,
+                                        document.getElementById('involved').append('<%=tasks.vehicleInvolved%> <%=tasks.plateNumber%>'),
+                                        document.getElementById('status').append('<%=tasks.status%>') ">
+                                <%=tasks.DATE%>&nbsp;&nbsp;&nbsp;&nbsp;<span id="briefdesc"><%=tasks.briefDescription%></span> &nbsp;&nbsp;&nbsp;&nbsp;
+                                <%=tasks.pio%></p>
+
+                            </li>
+                        <%}%>
+                        <% }); %>
+                  <% }else{ %>
+                    <p class="notasks">NO Tasks Today :D</p>
+                    <%};%>  
+            </ul>
+         </div>
+    </div>
+    
+        </form>
+    <div class="add-work">
+            <a href="/maintenance/history" class="work-und"><h7>WORKS HISTORY</h7></a>
+            <div>
+       <a href="/maintenance/add-work" class="add-job-button">Add</a>
+       </div>
+        
+    </div>
+    <div class="works">
+        <div class="history-content">
+            <div class="titlebar">
+                <span class="history">Date Added</span><span class="history">Equipment</span>
+                                <span class="history">Job Description</span><span class="history">Status</span></div>
+                               
+            <ul class="jobs">
+                <% if (today.length > 0) {%>
+                        <% today.forEach((tasks, index) => { %>
+                            <li class="job" data-modal-target='#modal'
+                            onclick="document.getElementById('personsIncharge').src = '/assets/staffs/<%=tasks.image%>',
+                                   document.getElementById('more').append('<%=tasks.moreInfo%>') ,
+                                        document.getElementById('date').append('<%=tasks.DATE%>') ,
+                                        document.getElementById('brief').append('<%=tasks.briefDescription%>') ,
+                                        document.getElementById('used').append('<%=tasks.materialUsed%> <%=tasks.size%>') ,
+                                        document.getElementById('tcost').append('<%=tasks.totalCost%>') ,
+                                        document.getElementById('pio').append('<%=tasks.pio%>') ,
+                                        document.getElementById('myreceipt').src='/assets/receipt/<%=tasks.receiptImage%>' ,
+                                        document.getElementById('myresult').style.backgroundImage = url('<%=tasks.receiptImage%>') ,
+                                        document.getElementById('involved').append('<%=tasks.vehicleInvolved%> <%=tasks.plateNumber%>'),
+                                        document.getElementById('status').append('<%=tasks.status%>') "
+                                         ><span class="history"><%= tasks.DATE%></span><span class="history"><%= tasks.vehicleInvolved%></span>
+                                <span class="history"><%= tasks.briefDescription%></span><span class="history"><%= tasks.status%></span></li>
+                        <% }); %>
+                  <% }else{ %>
+                    <p class="notasks">History Empty</p>
+                    <%};%>  
+            </ul>
+        </div>
+   
+    </div>
+    <%-include('../partials/jModal.ejs')%>
+</section>

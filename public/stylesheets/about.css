@@ -1,0 +1,43 @@
+nav .about{
+    background: var(--green);
+    color: var(--dark);
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  .content{
+    border-radius: 5px;
+
+      background: rgb(53, 54, 53);
+      color: var(--primary);
+    margin-left: 40px;
+    padding: 20px;
+  
+    box-shadow: var(--shadow);
+  }
+  .content h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+  }
+  .content p{
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+  .content .p1{
+    text-indent: 20px;
+  }
+  .content li{
+    list-style: none;
+    text-transform: uppercase;
+  
+  }
+  h6{
+    font-size: 1.7rem;
+    margin-bottom: 0px;
+    margin-top: 0px;
+   
+  }
+  .misvis{
+    margin-left: 20px;
+  }

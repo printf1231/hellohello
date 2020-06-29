@@ -1,0 +1,131 @@
+<div class="table-wrapper">
+        <style>
+
+                .overall{
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    position: fixed;
+                   background: #ccc;
+                }
+                .page-wrapper{
+                    width: auto;
+                }
+                nav{
+                    display: flex;
+                    justify-content: space-around;
+                    padding-top: 10px;
+                    background: rgb(46, 46, 46);
+
+                }
+                nav span a{
+                 
+                    text-decoration: none;
+                    font-size: 1.3rem;
+                }
+                .table-wrapper {
+                    box-shadow: var(--shadow);
+                    margin-top: 10px;
+                    margin-left: 10px;
+                    overflow-x: scroll;
+                    height: 700px;
+                     padding: 10px;
+                }
+                .dark{
+                    background:rgb(46, 46, 46) ;
+                    border-radius: 5px;
+                    color: darkgray;
+
+                }
+                .player-img {
+                    width: 100px;
+                    height: 100px;
+                }
+            
+                .add-player-form {
+                    margin-top: 50px;
+                }
+                .navbar a{
+                    color: rgb(58, 97, 58);
+                }
+                .width{
+                    width: 200px;
+                }
+                .edit{
+                    text-decoration: none;
+                    background: rgb(23, 105, 23);
+                    padding: 5px;
+                    border-radius: 5px;
+                    color: black;
+                    font-weight: bold;
+                }
+                .delete{
+                    text-decoration: none;
+                    background: rgb(139, 30, 30);
+                    padding: 5px;
+                    border-radius: 5px;
+                    color: black;
+                    font-weight: bold;
+                }
+               
+                
+            </style>
+        <div class="overall " >
+            <div class="page-wrapper">
+                <nav class="navbar navbar-light bg-dark">
+                    <span class="navbar-brand mb-0 h1" ><a href="/">Mariano Marcos State University</a></span>
+                    <span class="navbar-brand mb-0 h1" ><a href="/vehicle">Vehicle Gallery</a></span>
+        
+                    <span class="navbar-brand mb-0 h1" ><a href="/inventory">Vehicle Inventory</a></span>
+                    <span><a class="float-right" href="/inventory/add" title="Add a New Player">Add a Vehicle</a></span>
+                    
+                </nav>
+    <div class="table-wrapper">
+        <% if (vehicles.length > 0) {%>
+            <table class="fuck">
+                <thead class="dark"> 
+                    <tr >
+                        <th class="width">Image</th>
+                        <th class="width">Brand/Model</th>
+                        <th class="width">Date Acquired</th>
+                        <th class="width">Category</th>
+                        <th class="width">Cost</th>
+                        <th class="width">Plate Number</th>
+                        <th class="width">Health Status</th>
+                        <th class="width">Repairs</th>
+                        <th class="width">Availability</th>
+                        <th class="width">Pending Jobs</th>
+                        <th class="width">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="scrollmenu">
+                    <% vehicles.forEach((vehicle, index) => { %>
+                        <tr class="trtr">
+                            <td><img src="/assets/img/<%= vehicle.image %>" class="img-thumbnail player-img" alt=""></td>
+                            <td class="width"><%= vehicle.brand %></td>
+                            <td class="width"><%= vehicle.DATE %></td>
+                            <td class="width"><%= vehicle.category %></td>
+                            <td class="width">₱<%= vehicle.cost %></td>
+                            <td class="width"><%= vehicle.plate %></td>
+
+                            <td class="width" ><%= vehicle.health %></td>
+                            <td class="width"><%= vehicle.repairs %></td>
+                            <td class="width"><%= vehicle.availability %></td>
+                            <td class="width"><%= vehicle.pendingjobs %></td>
+                            
+                            <td>
+                                <a href="/inventory/edit/<%= vehicle.id %>" rel="noopener" class="edit">Edit</a>
+                                <a href="/inventory/delete/<%= vehicle.id %>" class="delete">Delete</a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p class="text-center">Inventory is empty. Go <a href="/inventory/add" >here</a> to add.</p>
+        <% } %>
+    </div>
+</div>
+</div>
+

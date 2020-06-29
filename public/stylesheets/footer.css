@@ -1,0 +1,16 @@
+footer{
+    margin-left: 0px;
+    margin-top: 130px;
+    display: block;
+    box-shadow: var(--shadow);
+    text-align: center;
+    padding-top: 0.5px;
+    background: var(--dark);
+    color: var(--green);
+    height: 3rem;
+  }
+  @media print{
+    footer{
+      display: none;
+    }
+  }

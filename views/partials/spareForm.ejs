@@ -1,0 +1,67 @@
+
+<form action="">
+        <!-- var todaysDate = new Date()
+        var datetoday = todaysDate.getDate()+''+(todaysDate.getMonth()+1)+''+todaysDate.getFullYear() -->
+    <div class="Sparewrapper" id="print-content">
+
+        <div class="formBox1">
+            <div class="logoSpare">
+                <img src="../images/logo.png" alt=""><br>
+                <p >MMSU-PMS</p>
+            </div>
+            <p class="titleSpare">SPARE PARTS</p>
+            <div class="nos">
+                    <%var todaysDate = new Date()%>
+                    <% var datetoday = todaysDate.getDate()+'-'+(todaysDate.getMonth()+1)+'-'+todaysDate.getFullYear()%>
+                <ul>
+                    <li class="hey">REF.Code</li>
+                    <li class="hey">REV. No.</li>
+                    <li class="hey">Page No.</li>
+                    <li class="hey">Date</li>
+                </ul>
+                 <ul>
+                    <li class="hey"></li>
+                    <li class="hey"></li>
+                    <li class="hey"></li>
+                    <li id="dateForm"><%=datetoday%></li>
+                </ul>
+            </div>
+        </div>
+        <p>EQUIPMENT</p>
+        <div class="formBox2">
+           <div class="one">
+               <p class="phey">Equipment Name: <span id="brandForm"></span><span id="plateForm"></span></p>
+               <p>Equipment Code: <span></span></p>
+           </div>
+           <div class="two">
+                <p>Priority Class: <span>Vital</span></p>
+                <p>Category: <span id="categoryForm"></span></p>
+            </div>
+
+        </div>
+        <hr>
+        <hr>
+        <div class="table">
+           <ul>
+               <li class="tableTitle1"><span>Technical Specifications</span><span>Brand/Part Number</span><span>For Purcahse Order</span>
+                    <span>Unit Cost</span><span>Total Cost</span></li>
+                <li class="tableTitle"><span></span><span></span><span></span><span></span><span></span></li>
+                <li class="tableTitle"><span></span><span></span><span></span><span></span><span></span></li>
+                <li class="tableTitle"><span></span><span></span><span></span><span></span><span></span></li>
+                <li class="tableTitle"><span></span><span></span><span></span><span></span><span></span></li>
+                <li class="tableTitle"><span></span><span></span><span></span><span></span><span></span></li>
+                <li class="tableTitle"><span></span><span></span><span></span><span></span><span></span></li>
+                <li class="tableTitle"><span></span><span></span><span></span><span></span><span></span></li>
+                <li class="tableTitle"><span></span><span></span><span></span><span></span><span></span></li>
+                <li class="tableTitle"><span></span><span></span><span></span><span></span><span></span></li>
+                <li class="tableTitle"><span></span><span></span><span></span><span></span><span></span></li>
+                <li class="tableTitle"><span></span><span></span><span></span><span></span><span></span></li>
+                <li class="tableTitle"><span></span><span></span><span></span><span></span><span></span></li>
+                <li class="tableTitle"><span></span><span></span><span></span><span></span><span></span></li>
+                <li class="tableTitle"><span></span><span></span><span></span><span></span><span></span></li>
+                <li class="tableTitle"><span></span><span></span><span></span><span></span><span></span></li>
+           </ul>
+        </div>
+    </div>
+
+</form>

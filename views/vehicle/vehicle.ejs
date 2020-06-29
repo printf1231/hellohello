@@ -1,0 +1,196 @@
+
+<link rel="stylesheet" href="../stylesheets/vehicle.css">
+<script defer src="../javascripts/vModal.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../stylesheets/vModal.css">
+<link rel="stylesheet" href="/stylesheets/spareForm.css">
+
+<div class="showBody">
+    <%-include('../partials/spareForm.ejs')%>
+<section class="category">
+
+    <%-include('../partials/vModal.ejs')%>
+
+    <ul>
+        <li class="bus">
+          <div class="sticky">
+            <h1>Bus/Truck</h1>
+            <a href="/inventory">Inventory</a> 
+          </div>
+            <div class="pics" id="bus" >
+              <% if (vehicle.length > 0) {%>
+                <% vehicle.forEach((vehicles, index) => { %>
+                      <%if(vehicles.category.toLowerCase() === "bus"){%>
+                        <img onclick="document.getElementById('modalImage').src = '../assets/img/<%=vehicles.image%>',
+                                     document.getElementById('title').append('<%=vehicles.category.toUpperCase()%>'),
+                                     document.getElementById('brand').append('<%=vehicles.brand%>'),
+                                      document.getElementById('pl').append('<%=vehicles.plate%>'),
+                                      document.getElementById('da').append('<%=vehicles.DATE%>'),
+                                      document.getElementById('cost').append('<%=vehicles.cost%>'), 
+                                      document.getElementById('hs').append('<%=vehicles.health%>'),
+                                      document.getElementById('repair').append('<%=vehicles.repairs%>'),
+                                      document.getElementById('avail').append('<%=vehicles.availability%>'),
+                                      document.getElementById('brandForm').append('<%=vehicles.brand%>'),
+                                      document.getElementById('plateForm').append('<%=vehicles.plate%>'),
+                                      document.getElementById('categoryForm').append('<%=vehicles.category%>'),
+                                      document.getElementById('pj').append('<%=vehicles.pendingjobs%>')
+                        "  data-modal-target='#modal' class="car" src="../assets/img/<%=vehicles.image%>" alt="">
+                       
+                  
+                        <%}%>
+                <% }); %>
+                <a href="/inventory/add"> <img class="add-thread"src="../images/add-thread.png" alt=""></a>
+          <% }; %>
+              
+            </div>
+        </li>
+
+        <li class="van">
+          <div class="sticky">
+          <h1>Van/SUV</h1>
+          <a href="/inventory">Inventory</a>
+          </div>
+          <div class="pics" id="van">
+            <% if (vehicle.length > 0) {%>
+                <% vehicle.forEach((vehicles, index) => { %>
+                      <%if(vehicles.category.toLowerCase() === "van"){%>
+                        <img onclick="document.getElementById('modalImage').src = '../assets/img/<%=vehicles.image%>',
+                                     document.getElementById('title').append('<%=vehicles.category.toUpperCase()%>'),
+                                     document.getElementById('brand').append('<%=vehicles.brand%>'),
+                                      document.getElementById('pl').append('<%=vehicles.plate%>'),
+                                      document.getElementById('da').append('<%=vehicles.DATE%>'),
+                                      document.getElementById('cost').append('<%=vehicles.cost%>'), 
+                                      document.getElementById('hs').append('<%=vehicles.health%>'),
+                                      document.getElementById('brandForm').append('<%=vehicles.brand%>'),
+                                      document.getElementById('plateForm').append('<%=vehicles.plate%>'),
+                                      document.getElementById('categoryForm').append('<%=vehicles.category%>'),
+                                      document.getElementById('repair').append('<%=vehicles.repairs%>'),
+                                      document.getElementById('avail').append('<%=vehicles.availability%>'),
+                                      document.getElementById('pj').append('<%=vehicles.pendingjobs%>'),
+                                      document.getElementById('thisisit').append('<%=vehicles.id%>')
+
+                        "  data-modal-target='#modal' class="car" src="../assets/img/<%=vehicles.image%>" alt="">
+                       
+                  
+                        <%}%>
+                <% }); %>
+                <a href="/inventory/add"> <img class="add-thread"src="../images/add-thread.png" alt=""></a>
+          <% }; %>
+            
+          </div>
+          </li>
+  
+  <!-- FARM EQUIPMENT -->
+          <li class="farm">
+              <div class="sticky">
+                  <h1>Farm Equipment</h1>
+                  <a href="/inventory">Inventory</a>
+                </div>
+            
+          <div class="pics" id="farm">
+            <% if (vehicle.length > 0) {%>
+                <% vehicle.forEach((vehicles, index) => { %>
+                      <%if(vehicles.category.toLowerCase() === "farm"){%>
+                        <img onclick="document.getElementById('modalImage').src = '../assets/img/<%=vehicles.image%>',
+                                     document.getElementById('title').append('<%=vehicles.category.toUpperCase()%>'),
+                                     document.getElementById('brand').append('<%=vehicles.brand%>'),
+                                      document.getElementById('pl').append('<%=vehicles.plate%>'),
+                                      document.getElementById('da').append('<%=vehicles.DATE%>'),
+                                      document.getElementById('cost').append('<%=vehicles.cost%>'), 
+                                      document.getElementById('brandForm').append('<%=vehicles.brand%>'),
+                                      document.getElementById('plateForm').append('<%=vehicles.plate%>'),
+                                      document.getElementById('categoryForm').append('<%=vehicles.category%>'),
+                                      document.getElementById('hs').append('<%=vehicles.health%>'),
+                                      document.getElementById('repair').append('<%=vehicles.repairs%>'),
+                                      document.getElementById('avail').append('<%=vehicles.availability%>'),
+                                      document.getElementById('pj').append('<%=vehicles.pendingjobs%>'),
+                                      document.getElementById('thisisit').append('<%=vehicles.id%>')
+
+                        "  data-modal-target='#modal' class="car" src="../assets/img/<%=vehicles.image%>" alt="">
+                       
+                  
+                        <%}%>
+                <% }); %>
+                <a href="/inventory/add"> <img class="add-thread"src="../images/add-thread.png" alt=""></a>
+          <% }; %>
+            
+            
+          </div>
+          </li>
+  
+  <!-- HEAVY EQUIPMENT -->
+          <li class="heavy">
+              <div class="sticky">
+                  <h1>Heavy Equipment</h1>
+                  <a href="/inventory">Inventory</a>
+                </div>
+            
+          <div class="pics" id="heavy">
+            <% if (vehicle.length > 0) {%>
+                <% vehicle.forEach((vehicles, index) => { %>
+                      <%if(vehicles.category.toLowerCase() === "heavy"){%>
+                        <img onclick="document.getElementById('modalImage').src = '../assets/img/<%=vehicles.image%>',
+                                     document.getElementById('title').append('<%=vehicles.category.toUpperCase()%>'),
+                                     document.getElementById('brand').append('<%=vehicles.brand%>'),
+                                      document.getElementById('pl').append('<%=vehicles.plate%>'),
+                                      document.getElementById('da').append('<%=vehicles.DATE%>'),
+                                      document.getElementById('cost').append('<%=vehicles.cost%>'), 
+                                      document.getElementById('brandForm').append('<%=vehicles.brand%>'),
+                                      document.getElementById('plateForm').append('<%=vehicles.plate%>'),
+                                      document.getElementById('categoryForm').append('<%=vehicles.category%>'),
+                                      document.getElementById('hs').append('<%=vehicles.health%>'),
+                                      document.getElementById('repair').append('<%=vehicles.repairs%>'),
+                                      document.getElementById('avail').append('<%=vehicles.availability%>'),
+                                      document.getElementById('pj').append('<%=vehicles.pendingjobs%>'),
+                                      document.getElementById('thisisit').append('<%=vehicles.id%>')
+                        "  data-modal-target='#modal' class="car" src="../assets/img/<%=vehicles.image%>" alt="">
+                       
+                  
+                        <%}%>
+                <% }); %>
+                <a href="/inventory/add"> <img class="add-thread"src="../images/add-thread.png" alt=""></a>
+          <% }; %>
+            
+          
+          </div>
+          </li>
+
+          <li class="heavy">
+              <div class="sticky">
+                  <h1>Motorcycle</h1>
+                  <a href="/inventory">Inventory</a>
+                </div>
+            
+          <div class="pics" >
+            <% if (vehicle.length > 0) {%>
+                <% vehicle.forEach((vehicles, index) => { %>
+                      <%if(vehicles.category.toLowerCase() === "motorcycle"){%>
+                        <img onclick="document.getElementById('modalImage').src = '../assets/img/<%=vehicles.image%>',
+                                     document.getElementById('title').append('<%=vehicles.category.toUpperCase()%>'),
+                                     document.getElementById('brand').append('<%=vehicles.brand%>'),
+                                      document.getElementById('pl').append('<%=vehicles.plate%>'),
+                                      document.getElementById('da').append('<%=vehicles.DATE%>'),
+                                      document.getElementById('cost').append('<%=vehicles.cost%>'), 
+                                      document.getElementById('brandForm').append('<%=vehicles.brand%>'),
+                                      document.getElementById('plateForm').append('<%=vehicles.plate%>'),
+                                      document.getElementById('categoryForm').append('<%=vehicles.category%>'),
+                                      document.getElementById('hs').append('<%=vehicles.health%>'),
+                                      document.getElementById('repair').append('<%=vehicles.repairs%>'),
+                                      document.getElementById('avail').append('<%=vehicles.availability%>'),
+                                      document.getElementById('pj').append('<%=vehicles.pendingjobs%>'),
+                                      document.getElementById('thisisit').append('<%=vehicles.id%>')
+                        "  data-modal-target='#modal' class="car" src="../assets/img/<%=vehicles.image%>" alt="">
+                       
+                  
+                        <%}%>
+                <% }); %>
+                <a href="/inventory/add"> <img class="add-thread"src="../images/add-thread.png" alt=""></a>
+          <% }; %>
+            
+           
+          </div>
+          </li>
+    </ul>
+
+</section>
+
+</div>

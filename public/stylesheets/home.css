@@ -1,0 +1,118 @@
+
+nav .home{
+    background: var(--green);
+    color: var(--dark);
+    font-size: 1.3rem;
+    font-weight: bold;
+  
+  }
+  /* top-container */
+  
+  .top-container{
+    display: grid;
+    grid-gap: 40px;
+    margin-left:60px;
+    width: 95%;
+    grid-template:
+      'showcase showcase '
+      'news-links announcement-links '
+    
+  }
+  /* showcase */
+  .showcase{
+    grid-area: showcase;
+    height: 200px;
+    max-width: 1400px;
+    display: block;
+    background: rgb(60, 61, 60);
+    color: var(--primary);
+    box-shadow: var(--shadow);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .showcase h5{
+    margin-top: 10px;
+    font-size: 2rem;
+    margin-bottom: 0px;
+    color: var(--light);
+  }
+  .showcase p{
+    text-indent: 30px;
+    margin-left: 10px;
+    font-size: 1rem;
+    margin-top: 0px;
+    color: var(--light);
+    padding: 10px;
+  }
+  .news-links{
+    grid-area: news-links;
+  }
+  .announcement-links{
+    grid-area: announcement-links;
+  }
+  .box img{
+    margin-top: 25px;
+    width: 180px;
+    height: 100px;
+    margin-left: 30px;
+  }
+  .box{
+    margin-top: 20px;
+    display: block;
+    box-shadow: var(--shadow); 
+    height: 500px;
+  
+    text-align: center;
+    overflow-x: hidden;
+    overflow-x: auto;
+  
+  
+  }
+  .box .university{
+    display: block;
+    position: sticky;
+    top: 0px;
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: var(--green);
+  }
+  .container{
+    text-align:  left;
+    margin: 20px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2,1fr);
+    height: 150px;
+    box-shadow: var(--shadow);
+    background: var(--primary);
+  
+  }
+  .container:hover{
+    background-color: var(--dark);
+    color: var(--green);
+    overflow:  visible;
+    text-overflow: inherit;
+  }
+  .container .paragraph{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 20px;
+  }
+  .container .paragraph .link{
+    cursor: pointer;
+    background: none;
+    color: var(--green);
+    text-decoration: none;
+  }
+.paragraph .link:hover{
+    background-color: var(--dark);
+    color: var(--green);
+    text-decoration: underline; 
+  }
+  .paragraph .title .link{
+    font-size: 1rem;
+    
+  }

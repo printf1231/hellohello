@@ -1,0 +1,72 @@
+
+
+
+<div class="table-wrapper">
+<%- include('./inventoryHead.ejs') %>
+<div class="container">
+    <% if (message) { %>
+        <p class="text-center text-danger"><%= message %></p>
+    <% } %>
+ 
+    <% if (vehicle) { %>
+        <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="brand">Brand/Model</label>
+                    <input type="text" class="form-control" name="brand" id="brand" value="<%= vehicle.brand %>" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="date">Date Acquired</label>
+                    <input type="date" class="form-control" name="date" id="date" value="<%= vehicle.date %>" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="plate">Plate Number</label>
+                    <input type="text" class="form-control" name="plate" id="plate" value="<%= vehicle.plate %>" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="cost">Cost</label>
+                    <input type="number" min="1" step="any" class="form-control" name="cost" id="cost" placeholder="Number" value="<%= vehicle.cost %>" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="category">Category</label>
+                    <select id="position" name="category" class="form-control" required>
+                        <option selected><%= vehicle.category %></option>
+                        <option>bus</option>
+                        <option>truck</option>
+                        <option>van/suv</option>
+                        <option>farm equipment</option>
+                        <option>heavy equipment</option>
+                        <option>motorcycle</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                    <div class="form-group col-md-10">
+                       
+                        <label for="first-name">Health Status</label>
+                        <input type="text" class="form-control" name="health" id="first-name" value="<%= vehicle.health %>">
+                    </div>
+                    <div class="form-group col-md-10">
+                        <label for="last-name">Repairs</label>
+                        <input type="text" class="form-control" name="repairs" id="last-name" value="<%= vehicle.repairs %>">
+                    </div>
+                    <div class="form-group col-md-10">
+                        <label for="username">Availability</label>
+                        <input type="text" class="form-control" name="availability" id="username" value="<%= vehicle.availability %>">
+                    </div>
+                    <div class="form-group col-md-10">
+                            <label for="username">Pending Jobs</label>
+                            <input type="text" class="form-control" name="pendingjobs" id="username" value="<%= vehicle.pendingjobs %>">
+                        </div>
+                </div>
+            <button type="submit" class="btn btn-success float-right">Update Vehicle</button>
+        </form>
+    <% } else { %>
+        <p class="text-center">No Vehicle Found. Go <a href="/inventory/add">here</a> to add.</p>
+    <% } %>
+</div>
+</div>
+
+</div>

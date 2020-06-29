@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="../stylesheets/staff.css">
+<script src="print.js"></script>
+
+
+<div class="staff-tree" id="div-id-name">
+    <!-- <div id="addhere"><a class="addhere" href="/staff/add-staff">Add Staff</a></div> -->
+    <div class="staffs">
+            <% if (staff.length > 0) {%>
+                <% staff.forEach((staff, index) => { %>
+                      
+                      <div class="container">
+                        <div class="content">
+                          <a href="/staff/view-staff/<%=staff.id%>" rel="noopener">
+                            <div class="content-overlay"></div>
+                            <img class="content-image" src='../assets/staffs/<%=staff.image%>'>
+                            <div class="content-details fadeIn-bottom">
+                              <h3 class="content-title"><%=staff.first+' '+staff.mid+'. '+staff.last %> </h3>
+                              <p class="content-text"><%=staff.position%></p>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                <% }); %>
+                <a href="/staff/add-staff"> <img class="add-thread"src="../images/add-thread.png" alt=""></a>
+          <% }; %>
+
+                        
+    </div>
+   
+   
+</div>

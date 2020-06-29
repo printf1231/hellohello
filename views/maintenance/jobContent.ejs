@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="../stylesheets/jobContent.css">
+<script defer src="../javascripts/view-job.js" type="text/javascript"></script>
+
+
+<section>
+
+          <% if (jobContents) { %>
+            
+    <form action="" class="jobcontent"  method="post" enctype="multipart/form-data">
+            <div class="goback">
+                    <a href="/home">Mariano Marcos State University</a>
+                    Job Details
+                    <a href="/maintenance">Maintenance</a>
+                    
+                </div>
+<div class="all1">
+                <div class="job-tree3" id="clickToViewJob" >
+                        <div class="tree-title">Jobs</div>
+
+                        <% if (jobContents.length > 0) {%>
+                            <% jobContents.forEach((job, index) => { %>
+                            
+                           <div class="tree3"> 
+                                <div class="treeDetails" >
+                                    <div id="fuck">  
+                                        <img     
+                                        onclick="
+                                        document.getElementById('personsIncharge').src = '/assets/staffs/<%=job.image%>',
+                                        document.getElementById('brief').append('<%=job.briefDescription%>'),
+                                        document.getElementById('more').append('<%=job.moreInfo%>') ,
+                                        document.getElementById('date').append('<%=job.date%> <%=job.time%>') ,
+                                        document.getElementById('brief').append('<%=job.briefDescription%>') ,
+                                        document.getElementById('used').append('<%=job.materialUsed%> <%=job.size%>') ,
+                                        document.getElementById('tcost').append('<%=job.totalCost%>') ,
+                                        document.getElementById('pio').append('<%=job.pio%>') ,
+                                        document.getElementById('recImage').src='/assets/receipt/<%=job.receiptImage%>' ,
+                                        document.getElementById('involved').append('<%=job.vehicleInvolved%> <%=job.plateNumber%>')"
+                                        src="/assets/staffs/<%=job.image%>" data-modal-target='#modal' alt="" ></div>
+                                    <div><%=job.briefDescription.toUpperCase()%> <br><%= job.date%><br><%= job.time%></div>
+                                  
+                                    
+                                </div>
+                        
+                            </div>
+                                  
+                            <% }); %>
+                            <a href="/maintenance/add-work"> <img class="add-thread"src="../images/add-thread.png" alt=""></a>
+                      <% }; %>
+                    </div>
+                      <div class="jobview">
+        
+        <div class="columnperson1">
+            <div class="personInCharge">
+             <div class="personTitle">Persons-In-Charge</div>
+                 <div class="picImages" >
+                     
+                    <img src="" alt="" id="personsIncharge">
+                 </div>
+             </div>
+             <div class="job-information" id="job-information">
+                <ul class="list-details">
+                    <li class="job-detail-list" ><span id="brief"></span></li>
+                    <li class="job-detail-list" ><span id="more"></span></li>
+                    <li class="job-detail-list" ><span id="date"></span></li><br>
+                    <li class="job-detail-list" >Materials Used and Qauntity:  &nbsp;<span id="used"></span></li>
+                    <li class="job-detail-list" >Person-in-Charge:  &nbsp;<span id="pio"></span></li>
+                    <li class="job-detail-list" >Vehicle Used-Plate Number:  &nbsp;<span id="involved"></span></li>
+                    <li class="job-detail-list" >Status:  &nbsp;<span id="status"></span></li>
+                    <li id="fuck"></li>
+                </ul>
+             </div>
+        </div>
+        <div class="columnperson2">
+            <div class="totalcost">Total Cost: <br><br>
+                <div id="tcost">₱&nbsp;</div>
+            </div>
+            <div class="receipt-title">Receipts</div>
+            <div class="receiptsImg">
+                
+                <img id="recImage" src="" alt="">
+            </div>
+        </div>
+    </div>
+                        
+                    
+                
+        
+</div>
+</form>
+<% } else { %>
+    <p class="text-center">No Staffs Found. Go <a href="/staff/add-staff">here</a> to add.</p>
+<% } %>
+
+</section>
